@@ -1,0 +1,8 @@
+hello world
+s: hello world
+u: user
+a: assistant
+tc: tool call
+tr: tool result
+c: comment
+err: error

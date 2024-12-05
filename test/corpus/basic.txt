@@ -1,0 +1,22 @@
+==================
+Basic roles
+==================
+
+s: hello world
+u: user
+a: assistant
+tc: tool call
+tr: tool result
+c: comment
+err: world
+
+---
+
+(source_file
+  (role)
+  (role)
+  (role)
+  (role)
+  (role)
+  (role)
+  (role))

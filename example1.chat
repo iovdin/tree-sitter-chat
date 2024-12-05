@@ -1,0 +1,8 @@
+s: hello world
+new line
+u: user
+a: assistant
+reply
+tc: tool call
+tr: tool result 
+tb: some stuff

@@ -10,9 +10,11 @@
 module.exports = grammar({
   name: "chat",
   rules: {
-    source_file: $ => seq($.role, repeat1($._next)),
-    _next: $ => choice($._role1, $._content),
-    role: $ => seq(choice("u", "s", "a", "tc", "tr"), ":"),
+    source_file: $ => seq(
+      choice($.role, $._content), 
+      repeat($._next)),
+    _next: $ => choice($._role1, $._content, /\n/),
+    role: $ => token(seq(choice("s", "u", "a", "tc", "tr", "c", "err"), ":")),
     _role1: $ => seq(/\n/, $.role),
     _content: $  => seq(optional(/\n/), /./),
 
