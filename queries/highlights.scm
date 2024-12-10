@@ -1,5 +1,3 @@
-(role) @variable
-
 ((role) @role.user
  (#eq? @role.user "u:"))
 
