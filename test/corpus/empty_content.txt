@@ -1,0 +1,36 @@
+=====================================
+Empty content
+=====================================
+
+u:
+a:
+s:
+tc:
+tr:
+c:
+err:
+
+---
+
+(source_file
+  (chat_entry
+    (role)
+    (empty_content))
+  (chat_entry
+    (role)
+    (empty_content))
+  (chat_entry
+    (role)
+    (empty_content))
+  (chat_entry
+    (role)
+    (empty_content))
+  (chat_entry
+    (role)
+    (empty_content))
+  (chat_entry
+    (role)
+    (empty_content))
+  (chat_entry
+    (role)
+    (empty_content)))

@@ -1,5 +1,56 @@
 [
   {
+    "type": "chat_entry",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "role",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "content",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "escaped_variable",
+          "named": true
+        },
+        {
+          "type": "newline",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "role",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "root": true,
@@ -9,14 +60,82 @@
       "required": false,
       "types": [
         {
-          "type": "role",
+          "type": "chat_entry",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "role",
+    "type": "a:",
+    "named": false
+  },
+  {
+    "type": "assistant:",
+    "named": false
+  },
+  {
+    "type": "c:",
+    "named": false
+  },
+  {
+    "type": "comment:",
+    "named": false
+  },
+  {
+    "type": "err:",
+    "named": false
+  },
+  {
+    "type": "error:",
+    "named": false
+  },
+  {
+    "type": "escaped_variable",
+    "named": true
+  },
+  {
+    "type": "newline",
+    "named": true
+  },
+  {
+    "type": "s:",
+    "named": false
+  },
+  {
+    "type": "system:",
+    "named": false
+  },
+  {
+    "type": "tc:",
+    "named": false
+  },
+  {
+    "type": "text",
+    "named": true
+  },
+  {
+    "type": "tool_call:",
+    "named": false
+  },
+  {
+    "type": "tool_result:",
+    "named": false
+  },
+  {
+    "type": "tr:",
+    "named": false
+  },
+  {
+    "type": "u:",
+    "named": false
+  },
+  {
+    "type": "user:",
+    "named": false
+  },
+  {
+    "type": "variable",
     "named": true
   }
 ]

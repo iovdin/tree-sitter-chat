@@ -1,20 +1,37 @@
+; User roles
 ((role) @role.user
- (#eq? @role.user "u:"))
+ (#any-of? @role.user "u:" "user:"))
 
+; Assistant roles
 ((role) @role.assistant
- (#eq? @role.assistant "a:"))
+ (#any-of? @role.assistant "a:" "assistant:"))
 
+; System roles
 ((role) @role.system
- (#eq? @role.assistant "s:"))
+ (#any-of? @role.system "s:" "system:"))
 
-((role) @role.tool_call
- (#eq? @role.tool_call "tc:"))
+; Tool call roles
+((role) @role.toolcall
+ (#any-of? @role.toolcall "tc:" "tool_call:"))
 
-((role) @role.tool_result
- (#eq? @role.tool_result "tr:"))
+; Tool result roles
+((role) @role.toolresult
+ (#any-of? @role.toolresult "tr:" "tool_result:"))
 
+; Comment roles
 ((role) @role.comment
- (#eq? @role.comment "c:"))
+ (#any-of? @role.comment "c:" "comment:"))
 
+; Error roles
 ((role) @role.err
- (#eq? @role.err "err:"))
+ (#any-of? @role.err "err:" "error:"))
+
+; Variables
+(variable) @variable
+
+; Escaped variables
+(escaped_variable) @text
+
+; Regular text
+(text) @text
+

@@ -1,22 +1,140 @@
-==================
-Basic roles
-==================
+=====================================
+Basic role with simple content
+=====================================
 
-s: hello world
-u: user
-a: assistant
-tc: tool call
-tr: tool result
-c: comment
-err: world
+u: Hello world
 
 ---
 
 (source_file
-  (role)
-  (role)
-  (role)
-  (role)
-  (role)
-  (role)
-  (role))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content))))
+
+=====================================
+Role with variable
+=====================================
+
+a: Hello {name}!
+
+---
+
+(source_file
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)
+      (variable
+        (variable_content))
+      (text_content))))
+
+=====================================
+Multiple variables in content
+=====================================
+
+s: Welcome {user}! Your account {status} is ready.
+
+---
+
+(source_file
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)
+      (variable
+        (variable_content))
+      (text_content)
+      (variable
+        (variable_content))
+      (text_content))))
+
+=====================================
+Multiple chat entries
+=====================================
+
+u: What's the weather?
+a: The weather is @temp degrees
+s: Processing request
+
+---
+
+(source_file
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)
+      (variable
+        (variable_content))
+      (text_content)))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content))))
+
+=====================================
+All role types
+=====================================
+
+s: System message
+u: User message
+a: Assistant message
+tc: Tool call
+tr: Tool response
+c: Chat message
+err: Error message
+
+---
+
+(source_file
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)))
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content))))
+
+=====================================
+Complex variables
+=====================================
+
+u: My settings are @user.preferences.theme and @user.preferences.language
+
+---
+
+(source_file
+  (chat_entry
+    (role)
+    (non_empty_content
+      (text_content)
+      (variable
+        (variable_content))
+      (text_content)
+      (variable
+        (variable_content)))))

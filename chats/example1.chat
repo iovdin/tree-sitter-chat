@@ -1,0 +1,21 @@
+s: hello world
+system: hello world
+new line
+new line1
+u: user
+user: user
+a: assistant
+assistant: assisstant
+reply
+tc: tool call
+tool_call: tool call
+tr: tool result 
+tool_result: tool result 
+err: error
+error: error
+c: comment
+comment: comment
+u: text 
+@variable 
+text
+@{ variable | hello }
