@@ -1,5 +1,6 @@
 s: hello world
-system: hello world
+system: 
+hello world
 new line
 u: user
 user: user
@@ -11,7 +12,13 @@ tool_call: tool call
 tr: tool result 
 tool_result: tool result 
 err: error
-error: error
+error: error 
 c: comment
-comment: comment
-u: @variable @{ variable | hello }
+comment: 
+comment 
+hello world
+bla bla
+c: ---
+u: hello world \" hello \"
+@variable @{ variable | hello }
+a: \@v

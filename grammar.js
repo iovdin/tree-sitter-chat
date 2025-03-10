@@ -46,21 +46,20 @@ module.exports = grammar({
     // Content can contain text, variables, and other elements
     content: $ => repeat1(
       choice(
-        $.text,
+        $.esc_variable,
+        $.esc,
         $.variable,
-        $.escaped_variable,
-        $.newline
+        $.newline,
+        $.text
       )
     ),
 
     // Text content is anything except variables and role markers
-    text: $ => token(prec(-1, /[^@\n]+/)),
+    text: $ => token(prec(-1, /[^\\@\n]+/)),
+    esc: $ => token(prec(-2, /\\/)),
 
     // Variables match the Rouge implementation using @ syntax
     variable: $ => token(/@{1,2}(?:\{[^}]+\}|\S+)/),
-    
-    // Escaped variables (preceded by backslash)
-    escaped_variable: $ => token(/\@/)
-
+    esc_variable: $ => token(/\\@(?:\{[^}]+\}|\S+)/),
   }
 });

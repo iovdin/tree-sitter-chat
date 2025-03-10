@@ -27,7 +27,11 @@
       "required": true,
       "types": [
         {
-          "type": "escaped_variable",
+          "type": "esc",
+          "named": true
+        },
+        {
+          "type": "esc_variable",
           "named": true
         },
         {
@@ -91,7 +95,11 @@
     "named": false
   },
   {
-    "type": "escaped_variable",
+    "type": "esc",
+    "named": true
+  },
+  {
+    "type": "esc_variable",
     "named": true
   },
   {
